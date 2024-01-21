@@ -37,3 +37,33 @@ int	ft_putnbr(int n)
 	free(num);
 	return (length);
 }
+
+int	ft_putuint(unsigned int n)
+{
+	int	index;
+	char	buffer[20];
+
+	index = sizeof(buffer - 1);
+	buffer[index] = '\0';
+	if (n == 0)
+	{
+		ft_putchar('0');
+		return (1);
+	}
+	while (n != 0 && index > 0)
+	{
+		buffer[--index] = 48 + (n % 10);
+		n /= 10;
+	}
+	while (buffer[index])
+	{
+		ft_putchar(buffer[index++]);
+	}
+	return (index);
+}
+
+int	ft_printpercent(void)
+{
+	ft_putchar('%');
+	return (1);
+}

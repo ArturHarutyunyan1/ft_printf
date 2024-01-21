@@ -14,6 +14,12 @@ int	ft_format(va_list args, const char format)
 		length += ft_printptr(va_arg(args, unsigned long long));
 	else if (format == 'd' || format == 'i')
 		length += ft_putnbr(va_arg(args, int));
+	else if (format == 'u')
+		length += ft_putuint(va_arg(args, unsigned int));
+	else if (format == 'x' || format == 'X')
+		length += ft_printhex(va_arg(args, unsigned int), format);
+	else if (format == '%')
+		length += ft_printpercent();
 	return (length);
 }
 
@@ -41,13 +47,3 @@ int	ft_printf(const char *str, ...)
 	va_end(args);
 	return (length);
 }
-
-int main()
-{
-	ft_printf("Printing a single character - %c\n", 'j');
-	ft_printf("Printing a string of characters - %s\n", "Gaspar is a nigger");
-	ft_printf("Printing a pointer in hexidecimal value %p\n", (void *)4567985);
-	ft_printf("Printing an decimal in base 10 - %d\n", 314);
-	ft_printf("Printing an integer in base 10 - %i\n", 98);
-}
-
