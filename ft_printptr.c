@@ -1,7 +1,7 @@
 #include "libft/libft.h"
 #include "ft_printf.h"
 
-int	ft_ptrlen(uintptr_t ptr)
+int	ft_ptrlen(unsigned long long ptr)
 {
 	int	length;
 
@@ -14,7 +14,7 @@ int	ft_ptrlen(uintptr_t ptr)
 	return (length);
 }
 
-void	ft_putptr(uintptr_t ptr)
+void	ft_putptr(unsigned long long ptr)
 {
 	if (ptr >= 16)
 	{
@@ -30,20 +30,22 @@ void	ft_putptr(uintptr_t ptr)
 	}
 }
 
-int ft_printptr(uintptr_t ptr)
+int ft_printptr(unsigned long long ptr)
 {
 	int	length;
 
 	length = 0;
-	length += ft_putstr("0x");
 	if (ptr == 0)
-	{
-		ft_putchar('0');
-	}
+		length += ft_putstr("(nil)");
 	else
 	{
+		ft_putstr("0x");
+		length += 2;
 		ft_putptr(ptr);
 		length += ft_ptrlen(ptr);
+		
 	}
+
+
 	return (length);
 }

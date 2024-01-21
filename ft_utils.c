@@ -38,28 +38,31 @@ int	ft_putnbr(int n)
 	return (length);
 }
 
-int	ft_putuint(unsigned int n)
+int ft_putuint(unsigned int n)
 {
-	int	index;
-	char	buffer[20];
+    int index;
+    int	count;
+    char buffer[20];
 
-	index = sizeof(buffer - 1);
-	buffer[index] = '\0';
-	if (n == 0)
-	{
-		ft_putchar('0');
-		return (1);
-	}
-	while (n != 0 && index > 0)
-	{
-		buffer[--index] = 48 + (n % 10);
-		n /= 10;
-	}
-	while (buffer[index])
-	{
-		ft_putchar(buffer[index++]);
-	}
-	return (index);
+    index = sizeof(buffer) - 1;
+    count = 0;
+    buffer[index] = '\0';
+    if (n == 0)
+    {
+        ft_putchar('0');
+        return (1);
+    }
+    while (n != 0 && index > 0)
+    {
+        buffer[--index] = '0' + (n % 10);
+        n /= 10;
+    }
+    while (buffer[index])
+    {
+        ft_putchar(buffer[index++]);
+	count++;
+    }
+    return (count);
 }
 
 int	ft_printpercent(void)
