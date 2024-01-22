@@ -1,3 +1,14 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_printptr.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: arturhar <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/01/22 13:00:29 by arturhar          #+#    #+#             */
+/*   Updated: 2024/01/22 13:11:40 by arturhar         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 #include "libft/libft.h"
 #include "ft_printf.h"
 
@@ -30,7 +41,7 @@ void	ft_putptr(unsigned long long ptr)
 	}
 }
 
-int ft_printptr(unsigned long long ptr)
+int	ft_printptr(unsigned long long ptr)
 {
 	int	length;
 
@@ -43,9 +54,6 @@ int ft_printptr(unsigned long long ptr)
 		length += 2;
 		ft_putptr(ptr);
 		length += ft_ptrlen(ptr);
-		
 	}
-
-
 	return (length);
 }

@@ -1,3 +1,14 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_printhex.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: arturhar <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/01/22 12:58:12 by arturhar          #+#    #+#             */
+/*   Updated: 2024/01/22 13:00:17 by arturhar         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 #include "libft/libft.h"
 #include "ft_printf.h"
 
@@ -35,7 +46,7 @@ void	ft_puthex(unsigned int hex, const char format)
 	}
 }
 
-int ft_printhex(unsigned int hex, const char format)
+int	ft_printhex(unsigned int hex, const char format)
 {
 	if (hex == 0)
 		return (ft_putchar('0'));

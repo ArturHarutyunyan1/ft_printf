@@ -1,13 +1,24 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_utils.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: arturhar <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/01/22 13:02:17 by arturhar          #+#    #+#             */
+/*   Updated: 2024/01/22 13:07:49 by arturhar         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 #include "libft/libft.h"
 #include "ft_printf.h"
 
-int ft_putchar(int c)
+int	ft_putchar(int c)
 {
 	write (1, &c, 1);
 	return (1);
 }
 
-int ft_putstr(char *str)
+int	ft_putstr(char *str)
 {
 	int	i;
 
@@ -19,7 +30,6 @@ int ft_putstr(char *str)
 	}
 	while (str[i])
 	{
-	
 		ft_putchar(str[i]);
 		i++;
 	}
@@ -28,7 +38,7 @@ int ft_putstr(char *str)
 
 int	ft_putnbr(int n)
 {
-	int	length;
+	int		length;
 	char	*num;
 
 	length = 0;
@@ -38,31 +48,31 @@ int	ft_putnbr(int n)
 	return (length);
 }
 
-int ft_putuint(unsigned int n)
+int	ft_putuint(unsigned int n)
 {
-    int index;
-    int	count;
-    char buffer[20];
+	int		index;
+	int		count;
+	char	buffer[20];
 
-    index = sizeof(buffer) - 1;
-    count = 0;
-    buffer[index] = '\0';
-    if (n == 0)
-    {
-        ft_putchar('0');
-        return (1);
-    }
-    while (n != 0 && index > 0)
-    {
-        buffer[--index] = '0' + (n % 10);
-        n /= 10;
-    }
-    while (buffer[index])
-    {
-        ft_putchar(buffer[index++]);
-	count++;
-    }
-    return (count);
+	index = sizeof(buffer) - 1;
+	count = 0;
+	buffer[index] = '\0';
+	if (n == 0)
+	{
+		ft_putchar('0');
+		return (1);
+	}
+	while (n != 0 && index > 0)
+	{
+		buffer[--index] = '0' + (n % 10);
+		n /= 10;
+	}
+	while (buffer[index])
+	{
+		ft_putchar(buffer[index++]);
+		count++;
+	}
+	return (count);
 }
 
 int	ft_printpercent(void)

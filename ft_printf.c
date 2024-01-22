@@ -1,3 +1,14 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: arturhar <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/01/22 12:50:00 by arturhar          #+#    #+#             */
+/*   Updated: 2024/01/22 12:53:53 by arturhar         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 #include "libft/libft.h"
 #include "ft_printf.h"
 
@@ -23,12 +34,11 @@ int	ft_format(va_list args, const char format)
 	return (length);
 }
 
-
 int	ft_printf(const char *str, ...)
 {
-	int	i;
-	int	length;
-	va_list args;
+	int		i;
+	int		length;
+	va_list	args;
 
 	va_start(args, str);
 	length = 0;
