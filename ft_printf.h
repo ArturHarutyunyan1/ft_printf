@@ -11,7 +11,8 @@ int ft_putstr(const char *str);
 int ft_hex_len(unsigned long long hex);
 int ft_print_hex(unsigned long long hex);
 int ft_putnbr(int nb);
+unsigned int ft_putuint(unsigned int nb);
 
 void ft_put_hex(unsigned long long hex);
-
+void reverse(const char *str);
 #endif

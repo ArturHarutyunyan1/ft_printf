@@ -27,6 +27,6 @@ int ft_printf(const char *str, ...)
 
 int main()
 {
-        ft_printf("ft_printf\nSingle character - %c\nString - %s\nVoid * as hexidecimal - %p\nDecimal in base 10 - %d\nInteger in base10 - %i\n", 'a', "String of characters!", (void *)123456798, -42, 42);
-//        printf("printf\nSingle character - %c\nString - %s\nVoid * as hexidecimal - %p\n", 'a', "String of characters!", (void *)123456798);
+    ft_printf("ft_printf\nSingle character - %c\nString - %s\nVoid * as hexidecimal - %p\nDecimal in base 10 - %d\nInteger in base10 - %i\nUnsigned decimal base 10 - %u\n", 'a', "String of characters!", (void *)123456798, -42, 42, 42);
+    printf("original\nSingle character - %c\nString - %s\nVoid * as hexidecimal - %p\nDecimal in base 10 - %d\nInteger in base10 - %i\nUnsigned decimal base 10 - %u\n", 'a', "String of characters!", (void *)123456798, -42, 42, 42);
 }
