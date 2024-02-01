@@ -13,6 +13,8 @@ int format_parser(va_list args, const char f)
                 length += ft_putnbr(va_arg(args, int));
         else if (f == 'u')
                 length += ft_putuint(va_arg(args, unsigned int));
+        else if (f == '%')
+                length += ft_putchar('%');
         else if (f == 'p' || f == 'x' || f == 'X')
                 if (f == 'p')
                     length += ft_print_hex(va_arg(args, unsigned long long), f);

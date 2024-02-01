@@ -33,7 +33,8 @@ int main() {
               "Integer in base10 - %i\n"
               "Unsigned decimal base 10 - %u\n"
               "Number in hexidecimal uppercase - %X\n"
-              "Number in hexidecimal lowercase - %x\n",
+              "Number in hexidecimal lowercase - %x\n"
+              "Percent sign - %%\n",
               'a',
               "String of characters!",
               (void *) 123456798,
@@ -50,7 +51,8 @@ int main() {
               "Integer in base10 - %i\n"
               "Unsigned decimal base 10 - %u\n"
               "Number in hexidecimal uppercase - %X\n"
-              "Number in hexidecimal lowercase - %x\n",
+              "Number in hexidecimal lowercase - %x\n"
+              "Percent sign - %%\n",
               'a',
               "String of characters!",
               (void *)123456798,
