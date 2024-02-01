@@ -13,34 +13,40 @@ int ft_hex_len(unsigned long long hex)
         return (length);
 }
 
-void ft_put_hex(unsigned long long hex)
+void ft_put_hex(unsigned long long hex, const char f)
 {
     if (hex >= 16)
     {
-        ft_put_hex(hex / 16);
-        ft_put_hex(hex % 16);
+        ft_put_hex(hex / 16, f);
+        ft_put_hex(hex % 16, f);
     }
     else
     {
         if (hex <= 9)
             ft_putchar((hex + '0'));
         else
-            ft_putchar((hex - 10 + 'a'));
+        {
+            if (f == 'X')
+                ft_putchar((hex - 10 + 'A'));
+            else
+                ft_putchar((hex - 10 + 'a'));
+        }
     }
 }
 
-int ft_print_hex(unsigned long long hex)
+int ft_print_hex(unsigned long long hex, const char f)
 {
     int length;
     
     length = 0;
-    if (hex == 0)
+    if (hex == 0 && f == 'p')
     {
         ft_putstr("0x0");
         return (3);
     }
-    length += ft_putstr("0x");
-    ft_put_hex(hex);
+    if (f == 'p')
+        length += ft_putstr("0x");
+    ft_put_hex(hex, f);
     length += ft_hex_len(hex);
     return (length);
 }

@@ -9,10 +9,10 @@ int format_parser(va_list args, const char f);
 int ft_putchar(int c);
 int ft_putstr(const char *str);
 int ft_hex_len(unsigned long long hex);
-int ft_print_hex(unsigned long long hex);
+int ft_print_hex(unsigned long long hex, const char f);
 int ft_putnbr(int nb);
 unsigned int ft_putuint(unsigned int nb);
 
-void ft_put_hex(unsigned long long hex);
+void ft_put_hex(unsigned long long hex, const char f);
 void reverse(const char *str);
 #endif
