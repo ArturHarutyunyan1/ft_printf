@@ -25,7 +25,7 @@ int ft_printf(const char *str, ...)
         return (length);
 }
 
-// int main()
-// {
-//         ft_printf("%c\n", 'a');
-// }
+int main()
+{
+        ft_printf("Single character - %c\nString - %s\n", 'a', "String of characters!");
+}

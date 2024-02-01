@@ -7,5 +7,6 @@
 int ft_printf(const char *str, ...);
 int format_parser(va_list args, const char f);
 int ft_putchar(int c);
+int ft_putstr(const char *str);
 
 #endif
