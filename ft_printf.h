@@ -10,6 +10,7 @@ int ft_putchar(int c);
 int ft_putstr(const char *str);
 int ft_hex_len(unsigned long long hex);
 int ft_print_hex(unsigned long long hex);
+int ft_putnbr(int nb);
 
 void ft_put_hex(unsigned long long hex);
 

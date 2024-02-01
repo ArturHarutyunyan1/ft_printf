@@ -20,3 +20,15 @@ int ft_putstr(const char *str)
                 ft_putchar(str[i++]);
         return (i);
 }
+
+int ft_putnbr(int nb)
+{
+    char *num;
+    int length;
+
+    length = 0;
+    num = ft_itoa(nb);
+    length += ft_putstr(num);
+    free (num);
+    return (length);
+}
