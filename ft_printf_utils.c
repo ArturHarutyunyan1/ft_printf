@@ -44,23 +44,25 @@ int ft_putnbr(int nb)
     return (length);
 }
 
-unsigned int ft_putuint(unsigned int nb)
+unsigned int ft_putuint(unsigned int n)
 {
-    char buffer[20];
     char digit;
+    char buffer[20];
     int length;
 
     length = 0;
-    if (nb == 0)
+    digit = 0;
+    if (n == 0)
     {
         ft_putchar('0');
         return (1);
     }
-    while (nb != 0)
+    while (n != 0)
     {
-        digit = nb % 10;
-        buffer[length++] = digit + '0';
-        nb /= 10;
+        digit = n % 10;
+        buffer[length] = digit + 48;
+        n /= 10;
+        length++;
     }
     reverse(buffer);
     return (length);

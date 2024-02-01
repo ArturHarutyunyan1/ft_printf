@@ -44,6 +44,11 @@ int ft_print_hex(unsigned long long hex, const char f)
         ft_putstr("0x0");
         return (3);
     }
+    else if (hex == 0 && f != 'p')
+    {
+        ft_putchar('0');
+        return (1);
+    }
     if (f == 'p')
         length += ft_putstr("0x");
     ft_put_hex(hex, f);

@@ -25,41 +25,41 @@ int ft_printf(const char *str, ...)
         return (length);
 }
 
-int main() {
-    ft_printf("ft_printf\nSingle character - %c"
-              "\nString - %s\n"
-              "Void * as hexidecimal - %p\n"
-              "Decimal in base 10 - %d\n"
-              "Integer in base10 - %i\n"
-              "Unsigned decimal base 10 - %u\n"
-              "Number in hexidecimal uppercase - %X\n"
-              "Number in hexidecimal lowercase - %x\n"
-              "Percent sign - %%\n",
-              'a',
-              "String of characters!",
-              (void *) 123456798,
-              -42,
-              42,
-              42,
-              123456789,
-              123456789
-    );
-    printf("Original\nSingle character - %c"
-              "\nString - %s\n"
-              "Void * as hexidecimal - %p\n"
-              "Decimal in base 10 - %d\n"
-              "Integer in base10 - %i\n"
-              "Unsigned decimal base 10 - %u\n"
-              "Number in hexidecimal uppercase - %X\n"
-              "Number in hexidecimal lowercase - %x\n"
-              "Percent sign - %%\n",
-              'a',
-              "String of characters!",
-              (void *)123456798,
-              -42,
-              42,
-              42,
-              123456789,
-              123456789
-    );
-}
+//int main() {
+//    ft_printf("ft_printf\nSingle character - %c"
+//              "\nString - %s\n"
+//              "Void * as hexidecimal - %p\n"
+//              "Decimal in base 10 - %d\n"
+//              "Integer in base10 - %i\n"
+//              "Unsigned decimal base 10 - %u\n"
+//              "Number in hexidecimal uppercase - %X\n"
+//              "Number in hexidecimal lowercase - %x\n"
+//              "Percent sign - %%\n",
+//              'a',
+//              "String of characters!",
+//              (void *) 123456798,
+//              -42,
+//              42,
+//              42,
+//              123456789,
+//              123456789
+//    );
+//    printf("Original\nSingle character - %c"
+//              "\nString - %s\n"
+//              "Void * as hexidecimal - %p\n"
+//              "Decimal in base 10 - %d\n"
+//              "Integer in base10 - %i\n"
+//              "Unsigned decimal base 10 - %u\n"
+//              "Number in hexidecimal uppercase - %X\n"
+//              "Number in hexidecimal lowercase - %x\n"
+//              "Percent sign - %%\n",
+//              'a',
+//              "String of characters!",
+//              (void *)123456798,
+//              -42,
+//              42,
+//              42,
+//              123456789,
+//              123456789
+//    );
+//}

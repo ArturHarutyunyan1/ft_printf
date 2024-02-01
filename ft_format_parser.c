@@ -20,7 +20,7 @@ int format_parser(va_list args, const char f)
             if (f == 'p')
                 length += ft_print_hex(va_arg(args, unsigned long long), f);
             else
-                length += ft_print_hex((unsigned int) va_arg(args, unsigned long long), f);
+                length += ft_print_hex(va_arg(args, unsigned int), f);
         }
         return (length);
 }
