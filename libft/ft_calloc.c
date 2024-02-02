@@ -6,17 +6,18 @@
 /*   By: arturhar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/20 17:31:50 by arturhar          #+#    #+#             */
-/*   Updated: 2024/01/22 11:56:11 by arturhar         ###   ########.fr       */
+/*   Updated: 2024/01/29 11:21:24 by arturhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
 void	*ft_calloc(size_t count, size_t size)
 {
-	if ((count > SIZE_MAX || size > SIZE_MAX) || (count > 0 && SIZE_MAX / count < size))
-		return (NULL);
 	void	*ptr;
 
+	if ((count > 65535 || size > 65535)
+		&& (count > 0 && 65535 / count < size))
+		return (NULL);
 	ptr = malloc(count * size);
 	if (!ptr)
 		return (NULL);

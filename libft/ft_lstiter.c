@@ -6,7 +6,7 @@
 /*   By: arturhar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 16:54:57 by arturhar          #+#    #+#             */
-/*   Updated: 2024/01/25 16:55:54 by arturhar         ###   ########.fr       */
+/*   Updated: 2024/01/29 11:15:17 by arturhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -47,8 +47,7 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 
 // 	node1->next = node2;
 // 	node2->next = node3;
-// 	node3->next = NULL;
-	
+// 	node3->next = NULL;	
 // 	lst = node1;
 
 // 	ft_lstiter(lst, &f);

@@ -6,7 +6,7 @@
 /*   By: arturhar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/26 17:17:04 by arturhar          #+#    #+#             */
-/*   Updated: 2024/01/26 17:18:26 by arturhar         ###   ########.fr       */
+/*   Updated: 2024/01/29 11:16:09 by arturhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -69,8 +69,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 
 // 	node1->next = node2;
 // 	node2->next = node3;
-// 	node3->next = NULL;
-	
+// 	node3->next = NULL;	
 // 	lst = node1;
 // 	result = ft_lstmap(lst, f, &del);
 

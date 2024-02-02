@@ -6,7 +6,7 @@
 /*   By: arturhar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 16:56:38 by arturhar          #+#    #+#             */
-/*   Updated: 2024/01/25 16:58:53 by arturhar         ###   ########.fr       */
+/*   Updated: 2024/01/29 11:16:22 by arturhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -45,8 +45,7 @@ t_list	*ft_lstnew(void *content)
 // 	node2->next = node3;
 // 	node3->next = NULL;
 
-// 	lst = ft_lstnew("Movses");
-	
+// 	lst = ft_lstnew("Movses");	
 // 	while (lst != NULL)
 // 	{
 // 		printf("%s", (char *)lst->content);
